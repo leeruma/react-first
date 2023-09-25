@@ -1,11 +1,15 @@
 import Footer from './components/Footer';
 import Header from './components/Header';
+import Popup from './components/Popup';
+import './style.scss';
 
 function App() {
+	let isPop = true;
 	return (
 		<>
 			<Header />
 			<Footer />
+			{isPop ? <Popup /> : null}
 		</>
 	);
 }
