@@ -19,12 +19,15 @@ import './style.scss';
 // 리액트 안에서 배열이나, 객체같은 참조형 자료는 무조건 deep copy를 해서 데이터를 변경해야됨
 
 function App() {
-	let arr = ['reading', 'game', 'cook'];
-	// 전개연산자 (Spread Operator) : heap메모리에 있는 값을 물리적으로 꺼내서 전개
-	let newArr = [...arr];
-	newArr[0] = 'exercise';
-	console.log(newArr);
-	console.log(arr);
+	let student = {
+		name: 'David',
+		age: 20,
+	};
+
+	let newStudent = { ...student };
+	newStudent.name = 'Andy';
+	console.log(newStudent);
+	console.log(student);
 
 	let isPop = true;
 	let isFooter = false;
