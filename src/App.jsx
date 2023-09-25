@@ -1,5 +1,13 @@
+import Footer from './components/Footer';
+import Header from './components/Header';
+
 function App() {
-	return <h1>Hello</h1>;
+	return (
+		<>
+			<Header />
+			<Footer />
+		</>
+	);
 }
 
 export default App;
@@ -25,4 +33,12 @@ export default App;
 
 	JSX
 	- 리엑트에 DOM을 효율적으로 생성하기 위한 HTML의 규칙성을 따라한 자바스크립트 DOM 제작 방식
+
+	컴포넌트 생성시 주의점
+	- 무조건 JSX를 리턴
+	- 함수 이름은 재문자로 시작
+	- export로 내보내야지 다른 컴포넌트에서 불러올 수 있음
+	- 하나의 컴포넌트 함수는 단일 JSX를 리턴 가능
+	- 복수개의 JSX를 리턴하고 싶을 때는 wrapping El로 묶어서 그룹화한 뒤 리턴
+	- 중첩된 Element노드를 생성하지 않고 복수개의 JSX를 리턴하고 싶을때는 <></> Fragment로 감싸줌
 */
