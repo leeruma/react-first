@@ -12,6 +12,11 @@ function Popup() {
 			console.log('popup 소멸');
 		};
 	}, []);
+
+	useEffect(() => {
+		console.log('popup의 Num 상태변화');
+	}, [Num]);
+
 	return (
 		<aside>
 			<h1>{Num}</h1>
